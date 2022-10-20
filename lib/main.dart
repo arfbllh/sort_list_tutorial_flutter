@@ -71,15 +71,7 @@ class _MyAppState extends State<MyApp> {
               children: [
                 Row(mainAxisAlignment: MainAxisAlignment.center, children: [
                   //Button For Changing sorting order
-                  TextButton.icon(
-                    icon: const Icon(Icons.compare_arrows_outlined),
-                    label: Text(order ? 'Ascending' : 'Descdending'),
-                    onPressed: () {
-                      setState(() {
-                        order = !order;
-                      });
-                    },
-                  ),
+
                   //Drop Down menu for selecting which value to sort by
                   DropdownButton<String>(
                     value: curDropdownValue,
@@ -96,6 +88,15 @@ class _MyAppState extends State<MyApp> {
                       });
                     },
                   ),
+                  TextButton.icon(
+                    icon: const Icon(Icons.compare_arrows_outlined),
+                    label: Text(order ? 'Ascending' : 'Descdending'),
+                    onPressed: () {
+                      setState(() {
+                        order = !order;
+                      });
+                    },
+                  ),
                 ]),
                 Expanded(child: listviewBuilder()),
               ],
@@ -107,16 +108,16 @@ class _MyAppState extends State<MyApp> {
   Widget listviewBuilder() => ListView.builder(
         itemCount: myList.length,
         itemBuilder: ((context, index) {
-          final sorted_list = myList;
+          List<Pair> sortedList = myList;
           if (curDropdownValue == 'By Value') {
-            if (order == true) {
-              
-            } else {}
+            sortedList.sort((a, b) => a.value.compareTo(b.value));
+            if (!order) sortedList = List.from(sortedList.reversed);
           } else {
-            if (order == true) {
-            } else {}
+            sortedList.sort((a, b) => a.name.compareTo(b.name));
+            if (!order) sortedList = List.from(sortedList.reversed);
           }
-          final currentItem = sorted_list[index];
+
+          final currentItem = sortedList[index];
           return ListTile(
             leading: CircleAvatar(
               radius: 20,
