@@ -229,22 +229,22 @@ Widget listviewBuilder() => ListView.builder(
 
 ![](assets/9.jpeg)
 
-1. Sorting by value in ascending order
+Sorting by value in ascending order
 
 ![](assets/2.jpeg)
 
-2. Sorting by value in descending order
+Sorting by value in descending order
 
 
 ![](assets/3.jpeg)
 
-3. Sorting by name in ascending order
+Sorting by name in ascending order
 
 
 
 ![](assets/1.jpeg)
 
-4. Sorting by name in descending order
+Sorting by name in descending order
 
 
 
