@@ -1,6 +1,21 @@
-# Tutorial on Sort List Flutter
+# Sorting a List View
+ListView is the most commonly used scrolling widget. It displays its children one after another in the scroll direction. In the cross axis, the children are required to fill the ListView. In this tutorial we will show how to sort a ListView based two fields in both and ascending and descending orders
 
-### **step 1: Create flutter project and add a simple stateful widget**
+![](assets/1.jpeg)
+
+
+## Prequisites
+1. Basics of stateful and stateless widget
+2. List and Pair Data Structures 
+3. ListView Widget
+
+## Project Setup
+For this project you can create a new project or a new file in your existing project.No other dependencies are required.
+
+
+### **Step 1: Create Flutter Project and Add a Simple Stateful Widget**
+
+We create a simple stateful widget. We return a scaffold that contains an appbar and a text in the center
 
 ```dart
 class MyApp extends StatefulWidget {
@@ -26,11 +41,11 @@ class _MyAppState extends State<MyApp> {
 }
 ```
 
-### **Step 2:**
+### **Step 2: Creating a Pair and List Data Structure**
 
 We will use a simple list of pairs/tuples for our list view
 so we create a very simple Pair class with an integer and a string value
-and make List<Pair> and some values to it
+
 
 ```dart
 //Pair Class
@@ -40,7 +55,7 @@ class Pair {
   Pair(this.value, this.name);
 }
 ```
-Now, insert some values to above list
+Now, make a List of pairs and insert some values to it.
 ```dart
 //Insert items to the list
 class _MyAppState extends State<MyApp> {
@@ -63,8 +78,13 @@ class _MyAppState extends State<MyApp> {
 }
 ```
 
-### **Step 3: now we will add a function which will return a listView widget**
+### **Step 3: Creating a List View Widget**
 
+Now we will add a function which will return a listView widget named listviewBuilder().
+
+![](assets/8.jpeg)
+
+``` dart
 //listView builder function
 class _MyAppState extends State<MyApp> {
   /*
@@ -87,10 +107,14 @@ class _MyAppState extends State<MyApp> {
         }),
       );
 }
+``` 
+### **Step 4: Adding Sort Buttons and Drop Down Menu**
 
-### **Step 4:**
-adding sort button and a drop down menu to select by which value
-you want to sort the list
+Here, we add a toggle button to select between ascending and descending order of sort. We aslo add a drop down menu to select on which field our list will be sorted (value/name)
+
+![](assets/7.jpeg)
+
+![](assets/6.png)
 
 ```dart
 //Required variables
@@ -168,9 +192,9 @@ class _MyAppState extends State<MyApp> {
 }
 ```
 
-### **Step 5 :**
-sorting the list according to the requirements
-we only need to modify our listview Builder function
+### **Step 5 : Adding Sort Functions to listViewbuilder function**
+
+Here, we use the built-in sort method of List data structure on listViewbuilder() function. Based on the field of the drop-down menu and state of the button we determine in which order the list should be sorted and on what field. We do this by passing b.value or b.name in the compareTo() method. By default the sort method sorts the list in ascending order. We reversed the list if the state of the button is descending.
 
 ```dart
 Widget listviewBuilder() => ListView.builder(
@@ -198,4 +222,40 @@ Widget listviewBuilder() => ListView.builder(
           );
         }),
       );
+
 ```
+## Screenshots
+Sorting by value in ascending order
+
+![](assets/1.jpeg)
+
+Sorting by value in descending order
+
+![](assets/2.jpeg)
+
+Sorting by name in ascending order
+
+![](assets/3.jpeg)
+
+
+Sorting by name in descending order
+
+![](assets/1.jpeg)
+
+## Rescources 
+1. [Stateful Widget](https://api.flutter.dev/flutter/widgets/StatefulWidget-class.html)
+2. [List Class dart](https://api.dart.dev/be/180791/dart-core/List-class.html)
+3. [Pair Class dart](https://pub.dev/documentation/analyzer_plugin/latest/utilities_pair/Pair-class.html)
+4. [List View Widget](https://api.flutter.dev/flutter/widgets/ListView-class.html#:~:text=ListView%20is%20the%20most%20commonly,extent%20in%20the%20scroll%20direction.)
+5. [A good video tutorial on this topic](https://www.youtube.com/watch?v=CzOEx5ZYOYI)
+   
+## Errors and Cautions
+
+1. Make sure to use stateful widget
+2. Add correct item counts in the listViewbuilder functions
+3. Make sure to use setState whenever you are making changes to any variables inside a stateful widget
+
+## Github Repository
+(sort_list_tutorial_flutter)[https://github.com/arfbllh/sort_list_tutorial_flutter]
+
+## Demo APK for this tutorial
