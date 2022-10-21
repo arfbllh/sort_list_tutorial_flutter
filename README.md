@@ -88,8 +88,9 @@ class _MyAppState extends State<MyApp> {
       );
 }
 
-//Step 4: adding sort button and a drop down menu to select by which value
-//you want to sort the list
+### **Step 4:**
+adding sort button and a drop down menu to select by which value
+you want to sort the list
 
 ```dart
 //Required variables
@@ -167,8 +168,9 @@ class _MyAppState extends State<MyApp> {
 }
 ```
 
-//Step 5 : sorting the list according to the requirements
-//we only need to modify our listview Builder function
+### **Step 5 :**
+sorting the list according to the requirements
+we only need to modify our listview Builder function
 
 ```dart
 Widget listviewBuilder() => ListView.builder(
