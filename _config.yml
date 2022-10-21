@@ -1,0 +1,7 @@
+remote_theme: dracula/gh-pages
+plugins:
+- jekyll-remote-theme
+
+title: [Sort a List by at least 2 different fields with both ascending and descending option]
+description: [A short tutorial for tabbed view with flutter and code snippets]
+icon: [assets/icon.png]
