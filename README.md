@@ -6,8 +6,9 @@ ListView is the most commonly used scrolling widget. It displays its children on
 
 ## Prequisites
 1. Basics of stateful and stateless widget
-2. List and Pair Data Structures 
+2. List Data Structures 
 3. ListView Widget
+4. DropDown Widget
 
 ## Project Setup
 For this project you can create a new project or a new file in your existing project.No other dependencies are required.
@@ -80,7 +81,7 @@ class _MyAppState extends State<MyApp> {
 
 ### **Step 3: Creating a List View Widget**
 
-Now we will add a function which will return a listView widget named listviewBuilder().
+Now we will add a function which will return a listView widget named listviewBuilder(). In the listView widget there is variable called currentItem and itemCounter. We assign our list length to itemCounter and our list to curretnt item We take every item from the list and view it as listTile. We add a circle avater to view the value and text field to view the name of the item. 
 
 ![](assets/8.jpeg)
 
@@ -256,7 +257,7 @@ Sorting by name in descending order
 3. Make sure to use setState whenever you are making changes to any variables inside a stateful widget
 
 ## Github Repository
-(sort_list_tutorial_flutter)[https://github.com/arfbllh/sort_list_tutorial_flutter]
+[sort_list_tutorial_flutter](https://github.com/arfbllh/sort_list_tutorial_flutter)
 
 ## Demo APK for this tutorial
 
