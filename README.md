@@ -226,22 +226,27 @@ Widget listviewBuilder() => ListView.builder(
 
 ```
 ## Screenshots
-Sorting by value in ascending order
 
 ![](assets/9.jpeg)
 
-Sorting by value in descending order
+1. Sorting by value in ascending order
 
 ![](assets/2.jpeg)
 
-Sorting by name in ascending order
+2. Sorting by value in descending order
+
 
 ![](assets/3.jpeg)
 
+3. Sorting by name in ascending order
 
-Sorting by name in descending order
+
 
 ![](assets/1.jpeg)
+
+4. Sorting by name in descending order
+
+
 
 ## Rescources 
 1. [Stateful Widget](https://api.flutter.dev/flutter/widgets/StatefulWidget-class.html)
