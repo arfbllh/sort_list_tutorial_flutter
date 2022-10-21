@@ -4,7 +4,7 @@ ListView is the most commonly used scrolling widget. It displays its children on
 ![](assets/1.jpeg)
 
 
-## Prequisites
+## Prerequisites
 1. Basics of stateful and stateless widget
 2. List Data Structures 
 3. ListView Widget
